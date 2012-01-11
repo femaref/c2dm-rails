@@ -12,17 +12,16 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "c2dm"
-  gem.homepage = "http://github.com/amro/c2dm"
+  gem.name = "c2dm-rails"
+  gem.homepage = "https://github.com/Femaref/c2dm-rails"
   gem.license = "MIT"
   gem.summary = %Q{c2dm sends push notifications to Android devices via google c2dm.}
   gem.description = %Q{c2dm sends push notifications to Android devices via google c2dm.}
-  gem.email = "amromousa@gmail.com"
-  gem.authors = ["Amro Mousa"]
+  gem.email = "femaref@gmail.com"
+  gem.authors = ["Heiko Moeller"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-   gem.add_runtime_dependency 'httparty', '> 0.6.0'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -34,21 +33,14 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
-
 task :default => :test
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "c2dm #{version}"
+  rdoc.title = "c2dm-rails #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

@@ -45,3 +45,6 @@ bin
 cache
 gems
 specifications
+*~
+.rvmrc
+.DS_STORE
