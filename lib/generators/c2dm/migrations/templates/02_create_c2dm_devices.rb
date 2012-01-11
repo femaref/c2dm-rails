@@ -1,4 +1,4 @@
-class CreateC2dmDevices < ActiveRecord::Migrations
+class CreateC2dmDevices < ActiveRecord::Migration
   def self.up
     create_table :c2dm_devices do |t|
       t.string :registration_id

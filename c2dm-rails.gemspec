@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Heiko Moeller"]
-  s.date = "2012-01-09"
+  s.date = "2012-01-11"
   s.description = "c2dm sends push notifications to Android devices via google c2dm."
   s.email = "femaref@gmail.com"
   s.extra_rdoc_files = [
@@ -25,15 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "c2dm-rails.gemspec",
-    "generators/c2dm_migrations_generator.rb",
-    "generators/templates/01_create_c2dm_apps.rb",
-    "generators/templates/02_create_c2dm_devices.rb",
-    "generators/templates/03_create_c2dm_notifications.rb",
     "lib/c2dm-rails.rb",
-    "lib/c2dm/app/models/app.rb",
-    "lib/c2dm/app/models/base.rb",
-    "lib/c2dm/app/models/device.rb",
-    "lib/c2dm/app/models/notification.rb",
     "lib/c2dm/c2dm-rails.rb",
     "lib/c2dm/lib/connection.rb",
     "test/helper.rb"

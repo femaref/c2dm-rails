@@ -1,14 +1,14 @@
 require 'httparty'
 require 'cgi'
 
-module C2DM
+module C2dm
   class Connection
     include HTTParty
     default_timeout 30
 
     attr_accessor :timeout, :username, :password, :source, :access_token
 
-    def initialize(username=nil, password=nil, source=C2DM.default_source)
+    def initialize(username=nil, password=nil, source=C2dm.default_source)
       @username = username
       @password = password
       @source   = source
@@ -38,7 +38,7 @@ module C2DM
         }
       }
 
-      response = self.class.post(C2DM.auth_url, params)
+      response = self.class.post(C2dm.auth_url, params)
 
       # check for authentication failures
       raise response.parsed_response if response['Error=']
@@ -67,7 +67,7 @@ module C2DM
         }
       }
 
-      self.class.post(C2DM.push_url, params)
+      self.class.post(C2dm.push_url, params)
     end
 
 
