@@ -7,7 +7,12 @@ class C2dm::App < C2dm::Base
   def deliver_notifications
     connection = C2dm::Connection.new(username, password, source)
     
-    self.notifications.deliverable.each { |notification| deliver_notification(notification, connection) }
+    self.notifications.deliverable.each do |notification|
+      if (notification.sent_at + (10 ** notification.tries).seconds) < Time.now
+        deliver_notification(notification, connection)
+    end
+    end
+      
   end
   
   def deliver_notification (notification, connection = nil)
@@ -34,12 +39,25 @@ class C2dm::App < C2dm::Base
         
         # these are recoverable errors
         if notification.error == "QuotaExceeded" || notification.error == "DeviceQuotaExceeded"
-          notification.deliver = true
+          notification.try += 1
+          if notification.try <= 4
+            notification.deliver = true
+          else
+            notification.error = "TriesExceeded"
+          end
         end
       end          
     elsif response.response.code == 503 # service not available, redeliver message later
-      notification.deliver = true
       notification.error = "Service temporarily unavailable"
+      
+      notification.try += 1
+      
+      if notification.try <= 4
+        notification.deliver = true
+      else
+        notification.error = "TriesExceeded"
+      end
+      
     elsif response.response.code == 401 # wrong api credentials
       notification.error = "wrong authtoken, check corresponding login"   
     else

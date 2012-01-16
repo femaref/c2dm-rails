@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Heiko Moeller"]
   s.date = "2012-01-16"
-  s.description = "c2dm sends push notifications to Android devices via google c2dm."
+  s.description = "c2dm-rails provides infrastructure to send push notifications to android devices via google c2dm."
   s.email = "femaref@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -40,7 +40,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
-  s.summary = "c2dm sends push notifications to Android devices via google c2dm."
+  s.summary = "c2dm-rails provides infrastructure to send push notifications to android devices via google c2dm."
   s.test_files = [
     "test/helper.rb"
   ]

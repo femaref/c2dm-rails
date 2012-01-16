@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "c2dm-rails"
   gem.homepage = "https://github.com/Femaref/c2dm-rails"
   gem.license = "MIT"
-  gem.summary = %Q{c2dm sends push notifications to Android devices via google c2dm.}
-  gem.description = %Q{c2dm sends push notifications to Android devices via google c2dm.}
+  gem.summary = %Q{c2dm-rails provides infrastructure to send push notifications to android devices via google c2dm.}
+  gem.description = %Q{c2dm-rails provides infrastructure to send push notifications to android devices via google c2dm.}
   gem.email = "femaref@gmail.com"
   gem.authors = ["Heiko Moeller"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

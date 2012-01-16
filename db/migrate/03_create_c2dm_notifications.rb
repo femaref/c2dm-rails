@@ -10,6 +10,7 @@ class CreateC2dmNotifications < ActiveRecord::Migration
       t.string :error
       t.boolean :deliver, :default => true
       t.datetime :sent_at
+      t.integer :try
       
       t.timestamps
     end
