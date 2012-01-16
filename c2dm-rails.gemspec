@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "c2dm-rails"
-  s.version = "0.1.6"
+  s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Heiko Moeller"]
-  s.date = "2012-01-11"
+  s.date = "2012-01-16"
   s.description = "c2dm sends push notifications to Android devices via google c2dm."
   s.email = "femaref@gmail.com"
   s.extra_rdoc_files = [
@@ -24,10 +24,16 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "VERSION",
+    "app/models/c2dm/app.rb",
+    "app/models/c2dm/base.rb",
+    "app/models/c2dm/device.rb",
+    "app/models/c2dm/notification.rb",
     "c2dm-rails.gemspec",
+    "db/migrate/01_create_c2dm_apps.rb",
+    "db/migrate/02_create_c2dm_devices.rb",
+    "db/migrate/03_create_c2dm_notifications.rb",
     "lib/c2dm-rails.rb",
-    "lib/c2dm/c2dm-rails.rb",
-    "lib/c2dm/lib/connection.rb",
+    "lib/connection.rb",
     "test/helper.rb"
   ]
   s.homepage = "https://github.com/Femaref/c2dm-rails"
