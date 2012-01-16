@@ -46,6 +46,12 @@ class C2dm::App < C2dm::Base
             notification.error = "TriesExceeded"
           end
         end
+        
+        # not a device connected with this app, delete it
+        if notification.error == "InvalidRegistration" || notification.error == "NotRegistered"
+          notification.device.delete
+        end
+        
       end          
     elsif response.response.code == 503 # service not available, redeliver message later
       notification.error = "Service temporarily unavailable"
