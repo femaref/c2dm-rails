@@ -8,7 +8,7 @@ module C2dm
 
     attr_accessor :timeout, :username, :password, :source, :access_token
 
-    def initialize(username=nil, password=nil, source=C2dm.default_source)
+    def initialize(username, password, source)
       @username = username
       @password = password
       @source   = source

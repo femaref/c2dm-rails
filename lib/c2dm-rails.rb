@@ -5,8 +5,6 @@ module C2dm
   
   mattr_accessor :push_url
   
-  mattr_accessor :default_source
-  
   
   def self.setup
     yield self
