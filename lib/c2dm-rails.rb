@@ -1,10 +1,9 @@
-require 'c2dm-rails'
-
 module C2dm
   mattr_accessor :auth_url
-  
   mattr_accessor :push_url
   
+  C2dm.auth_url = 'https://www.google.com/accounts/ClientLogin'
+  C2dm.push_url = 'https://android.apis.google.com/c2dm/send'
   
   def self.setup
     yield self
