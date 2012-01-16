@@ -13,6 +13,8 @@ module C2dm
   end
   
   class Engine < Rails::Engine
+    engine_name "c2dm"
+    
     config.c2dm = C2dm
     
     initializer "c2dm.initialize" do |app|
