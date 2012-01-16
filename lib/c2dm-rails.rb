@@ -18,4 +18,5 @@ module C2dm
     initializer "c2dm.initialize" do |app|
       app.config.c2dm = C2dm
     end
+  end
 end
