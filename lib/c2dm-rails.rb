@@ -1,3 +1,6 @@
+require "c2dm-rails"
+require "connection"
+
 module C2dm
   mattr_accessor :auth_url
   mattr_accessor :push_url
