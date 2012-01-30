@@ -10,11 +10,10 @@ class C2dm::App < C2dm::Base
     self.notifications.deliverable.each do |notification|
       if (notification.sent_at + (10 ** notification.tries).seconds) < Time.now
         deliver_notification(notification, connection)
-    end
-    end
-      
+      end
+    end 
   end
-  
+    
   def deliver_notification (notification, connection = nil)
     connection ||= C2dm::Connection.new(username, password, source)
     

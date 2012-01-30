@@ -30,7 +30,7 @@ After you configured the app, you'll need to add devices to it. A device is iden
 
 Once you have the device, you are able to add messages to it, simply create a new C2dm::Notification object via device.notifications.new with the following information:
 
-  data: a key/value pair string in the form of key1=value1&key2=value2
+  data: a hash, { :key1 => "value1", :key2 => "value2" }
   delay_while_idle: boolean telling the google server if it should wake the device if it is idle
   collapse_key: this details a group of messages. If the device is offline, it will only receive the "last" message. As there is now guarantee of delivering order, the "last" message might not be last message sent by your application
 
