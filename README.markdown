@@ -26,9 +26,9 @@ The gem is database driven. First of all, you need to create an app with the fol
 
 This can be done from the console, as these credentials won't change much.
 
-After you configured the app, you'll need to add devices to it. A device is identified by a registration_id, this can be send by the client each time it logs in, or can be done explicitly with a controller.
+After you configured the app, you'll need to add devices to it. A device is identified by a `registration_id`, this can be send by the client each time it logs in, or can be done explicitly with a controller.
 
-Once you have the device, you are able to add messages to it, simply create a new C2dm::Notification object via device.notifications.new with the following information:
+Once you have the device, you are able to add messages to it, simply create a new `C2dm::Notification` object via `device.notifications.new` with the following information:
 
     data: a hash, { :key1 => "value1", :key2 => "value2" }
     delay_while_idle: boolean telling the google server if it should wake the device if it is idle
