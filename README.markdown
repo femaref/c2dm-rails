@@ -41,7 +41,7 @@ After you added messages, get an instance of your app and send the messages:
     app = C2dm::App.find(some_id)
     app.deliver_notifications
 
-The app contains an exponential back-off mechanism for notifications that failed to deliver. It is of the form `last_sent_date` + 10 ** tries, with a maximum of 4 tries (about three hours).
+The app contains an exponential back-off mechanism for notifications that failed to deliver. It is of the form `last_sent_date + 10 ** tries`, with a maximum of 4 tries (about three hours).
 
 
 
