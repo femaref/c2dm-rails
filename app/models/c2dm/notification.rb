@@ -5,5 +5,5 @@ class C2dm::Notification < C2dm::Base
   
   serialize :data, Hash
   
-  scope :deliverable, ->() { where(:deliver => true) }
+  scope :deliverable, lambda { where(:deliver => true) }
 end
