@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "c2dm-rails"
-  s.version = "1.0.1"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Heiko Moeller"]
-  s.date = "2012-02-08"
+  s.date = "2012-02-12"
   s.description = "c2dm-rails provides infrastructure to send push notifications to android devices via google c2dm."
   s.email = "femaref@gmail.com"
   s.extra_rdoc_files = [
