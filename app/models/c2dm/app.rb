@@ -8,7 +8,7 @@ class C2dm::App < C2dm::Base
     connection = C2dm::Connection.new(username, password, source)
     
     self.notifications.deliverable.each do |notification|
-      if (notification.sent_at + (10 ** notification.tries).seconds) < Time.now
+      unless notification.should_wait?
         deliver_notification(notification, connection)
       end
     end 
