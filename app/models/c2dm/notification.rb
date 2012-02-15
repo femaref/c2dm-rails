@@ -8,6 +8,6 @@ class C2dm::Notification < C2dm::Base
   scope :deliverable, lambda { where(:deliver => true) }
   
   def should_wait?
-    sent_at && ((sent_at + (10 ** try).seconds) >= Time.now)
+    sent_at && ((sent_at + (10 ** tries).seconds) >= Time.now)
   end
 end
