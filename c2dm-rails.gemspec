@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Heiko Moeller"]
-  s.date = "2012-02-15"
+  s.date = "2012-03-07"
   s.description = "c2dm-rails provides infrastructure to send push notifications to android devices via google c2dm."
   s.email = "femaref@gmail.com"
   s.extra_rdoc_files = [
