@@ -1,5 +1,5 @@
 class C2dm::App < C2dm::Base  
-  set_table_name "c2dm_apps"
+  self.table_name= "c2dm_apps"
   
   has_many :devices, :class_name => "C2dm::Device", :dependent => :destroy
   has_many :notifications, :through => :devices, :dependent => :destroy
