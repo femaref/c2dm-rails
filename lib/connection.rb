@@ -13,12 +13,14 @@ module Gcm
     end
 
     # {
-    #   :registration_id => "...",
+    #   :registration_ids => ["...", "..."],
     #   :data => {
     #     :some_message => "Hi!", 
     #     :another_message => 7
     #   }
-    #   :collapse_key => "optional collapse_key string"
+    #   :collapse_key => "optional collapse_key string",
+    #   :time_to_live => some_int, # seconds
+    #   :delay_while_idle => false
     # }
     def send_batch(options)
       options[:collapse_key] ||= 'default'
