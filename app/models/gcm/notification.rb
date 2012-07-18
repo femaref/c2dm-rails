@@ -1,7 +1,7 @@
-class C2dm::Notification < C2dm::Base
-  self.table_name= "c2dm_notifications"
+class Gcm::Notification < Gcm::Base
+  self.table_name= "gcm_notifications"
   
-  belongs_to :device, :class_name => "C2dm::Device"
+  belongs_to :device, :class_name => "Gcm::Device"
   
   serialize :data, Hash
   

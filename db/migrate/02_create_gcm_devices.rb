@@ -1,6 +1,6 @@
 class CreateC2dmDevices < ActiveRecord::Migration
   def self.up
-    create_table :c2dm_devices do |t|
+    create_table :gcm_devices do |t|
       t.string :registration_id
       t.integer :app_id
       
@@ -9,6 +9,6 @@ class CreateC2dmDevices < ActiveRecord::Migration
   end
   
   def self.down
-    drop_table :c2dm_devices
+    drop_table :gcm_devices
   end
 end

@@ -4,13 +4,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "c2dm-rails"
+  s.name = "Gcm-rails"
   s.version = "1.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Heiko Moeller"]
   s.date = "2012-03-07"
-  s.description = "c2dm-rails provides infrastructure to send push notifications to android devices via google c2dm."
+  s.description = "Gcm-rails provides infrastructure to send push notifications to android devices via google Gcm."
   s.email = "femaref@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -24,23 +24,23 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "VERSION",
-    "app/models/c2dm/app.rb",
-    "app/models/c2dm/base.rb",
-    "app/models/c2dm/device.rb",
-    "app/models/c2dm/notification.rb",
-    "c2dm-rails.gemspec",
+    "app/models/Gcm/app.rb",
+    "app/models/Gcm/base.rb",
+    "app/models/Gcm/device.rb",
+    "app/models/Gcm/notification.rb",
+    "Gcm-rails.gemspec",
     "db/migrate/01_create_c2dm_apps.rb",
     "db/migrate/02_create_c2dm_devices.rb",
     "db/migrate/03_create_c2dm_notifications.rb",
-    "lib/c2dm-rails.rb",
+    "lib/Gcm-rails.rb",
     "lib/connection.rb",
     "test/helper.rb"
   ]
-  s.homepage = "https://github.com/Femaref/c2dm-rails"
+  s.homepage = "https://github.com/Femaref/Gcm-rails"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
-  s.summary = "c2dm-rails provides infrastructure to send push notifications to android devices via google c2dm."
+  s.summary = "Gcm-rails provides infrastructure to send push notifications to android devices via google Gcm."
   s.test_files = [
     "test/helper.rb"
   ]

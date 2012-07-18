@@ -1,9 +1,7 @@
 class CreateC2dmNotifications < ActiveRecord::Migration
   def self.up
-    create_table :c2dm_notifications do |t|  
-      t.string :collapse_key
-      t.text :data
-      t.boolean :delay_while_idle
+    create_table :gcm_notifications do |t|  
+      t.integer :batch_id
       t.integer :device_id
     
       t.integer :message_id
@@ -17,6 +15,6 @@ class CreateC2dmNotifications < ActiveRecord::Migration
   end
   
   def self.down
-    drop_table :c2dm_notifications
+    drop_table :gcm_notifications
   end
 end
